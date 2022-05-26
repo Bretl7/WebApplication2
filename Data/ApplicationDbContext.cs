@@ -14,5 +14,7 @@ namespace WebApplication2.Data
         public DbSet<Player> Players { get; set; }
 
         public DbSet<Bot> Bots { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }

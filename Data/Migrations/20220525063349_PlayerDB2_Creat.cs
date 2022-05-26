@@ -37,6 +37,18 @@ namespace WebApplication2.Data.Migrations
                 {
                     table.PrimaryKey("PK_Players", x => x.Id);
                 });
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                   
+                    Mood = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -46,6 +58,8 @@ namespace WebApplication2.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Players");
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }
