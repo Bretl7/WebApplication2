@@ -19,6 +19,6 @@ namespace WebApplication2.Models
 
         public string Email { get; set; }
 
-        public string Number { get; set; }
+        public string Taco { get; set; }
     }
 }
