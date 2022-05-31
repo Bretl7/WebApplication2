@@ -11,7 +11,7 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrator")]
     public class BotsController : Controller
     {
         private readonly ApplicationDbContext _context;
